@@ -1,5 +1,6 @@
 import { Autor } from "../types/Autor.js";
 import AutorRepository from "../types/AutorRepository.js";
+import { gerarHashAleatorio } from "../utils/formatters.js";
 
 const elementoFormulario = document.querySelector(".block-novo-autor form") as HTMLFormElement;
 if (elementoFormulario) {
@@ -34,7 +35,10 @@ if (elementoFormulario) {
         return;
       }
 
+      const idUnico: string = gerarHashAleatorio();
+
       const novoAutor: Autor = {
+        id: idUnico,
         nome: _nome,
         email: _email,
         biografia: _biografia,

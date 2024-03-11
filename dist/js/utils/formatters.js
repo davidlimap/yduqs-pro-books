@@ -12,5 +12,16 @@ export function formatarData(data, formato = FormatoData.PADRAO) {
             month: "2-digit"
         });
     }
-    return data.toLocaleDateString("pt-br");
+    return new Date(data).toLocaleDateString("pt-br");
+}
+export function gerarHashAleatorio(tamanho = 16) {
+    const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let hash = '';
+    for (let i = 0; i < tamanho; i++) {
+        const indice = Math.floor(Math.random() * caracteres.length);
+        hash += caracteres.charAt(indice);
+    }
+    // Adiciona um timestamp para tornar o hash mais único
+    hash += Date.now().toString();
+    return hash;
 }

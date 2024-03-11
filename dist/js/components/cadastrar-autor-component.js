@@ -1,4 +1,5 @@
 import AutorRepository from "../types/AutorRepository.js";
+import { gerarHashAleatorio } from "../utils/formatters.js";
 const elementoFormulario = document.querySelector(".block-novo-autor form");
 if (elementoFormulario) {
     elementoFormulario.addEventListener("submit", function (event) {
@@ -26,7 +27,9 @@ if (elementoFormulario) {
                 alert("O campo biografia deve conter no máximo 500 caracteres.");
                 return;
             }
+            const idUnico = gerarHashAleatorio();
             const novoAutor = {
+                id: idUnico,
                 nome: _nome,
                 email: _email,
                 biografia: _biografia,

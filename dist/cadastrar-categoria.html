@@ -94,46 +94,47 @@
       </div>
       <!-- /.sidebar -->
     </aside>
+
+    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-
-
       <!-- Main content -->
       <section class="content">
         <div class="container-fluid">
-
           <div class="row">
-            <div class="col-12">
-              <div class="card">
+            <!-- left column -->
+            <div class="col-md-6">
+              <!-- general form elements -->
+              <div class="card card-primary block-nova-categoria">
                 <div class="card-header">
-                  <h3 class="card-title">Autores</h3>
+                  <h3 class="card-title">Cadastrar Categoria</h3>
                 </div>
                 <!-- /.card-header -->
-                <div class="card-body table-responsive p-0" style="height: 300px;">
-                  <table id="lista-autor" class="table table-head-fixed text-nowrap">
-                    <thead>
-                      <tr>
-                        <th>Nome</th>
-                        <th>Data de Cadastro</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>John Doe</td>
-                        <td>11-7-2014</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <!-- /.card-body -->
+                <!-- form start -->
+                <form action="" method="post" novalidate>
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="nome">Nome</label>
+                      <input type="text" class="form-control" id="nome" placeholder="Nome da categoria" required />
+                    </div>
+                  </div>
+                  <!-- /.card-body -->
+
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                  </div>
+                </form>
               </div>
               <!-- /.card -->
             </div>
+            <!--/.col (left) -->
           </div>
           <!-- /.row -->
         </div><!-- /.container-fluid -->
       </section>
       <!-- /.content -->
     </div>
+    <!-- /.content-wrapper -->
+
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
       <!-- Control sidebar content goes here -->
@@ -151,7 +152,7 @@
   <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
   <script src="dist/js/adminlte.js"></script>
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/main-categoria.js"></script>
 </body>
 
 </html>

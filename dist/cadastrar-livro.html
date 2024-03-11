@@ -51,7 +51,7 @@
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-copy"></i>
                 <p>
-                  Autor
+                  Livro
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
@@ -94,46 +94,85 @@
       </div>
       <!-- /.sidebar -->
     </aside>
+
+    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-
-
       <!-- Main content -->
       <section class="content">
         <div class="container-fluid">
-
           <div class="row">
-            <div class="col-12">
-              <div class="card">
+            <!-- left column -->
+            <div class="col-md-6">
+              <!-- general form elements -->
+              <div class="card card-primary block-novo-livro">
                 <div class="card-header">
-                  <h3 class="card-title">Autores</h3>
+                  <h3 class="card-title">Cadastrar Livro</h3>
                 </div>
                 <!-- /.card-header -->
-                <div class="card-body table-responsive p-0" style="height: 300px;">
-                  <table id="lista-autor" class="table table-head-fixed text-nowrap">
-                    <thead>
-                      <tr>
-                        <th>Nome</th>
-                        <th>Data de Cadastro</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>John Doe</td>
-                        <td>11-7-2014</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <!-- /.card-body -->
+                <!-- form start -->
+                <form action="" method="post" novalidate>
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="titulo">Título</label>
+                      <input type="text" class="form-control" id="titulo" placeholder="Título do livro" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="resumo">Resumo</label>
+                      <input type="text" class="form-control" id="resumo" placeholder="Resumo do livro" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="sumario">Sumário</label>
+                      <input type="text" class="form-control" id="sumario" placeholder="Sumário do livro" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="valor">Preço</label>
+                      <input type="number" class="form-control" id="valor" placeholder="0,00" step=".01" min="0"
+                        required />
+                    </div>
+                    <div class="form-group">
+                      <label for="num-paginas">Número de Páginas</label>
+                      <input type="number" class="form-control" id="num-paginas" placeholder="Número de páginas"
+                        required />
+                    </div>
+                    <div class="form-group">
+                      <label for="isbn">ISBN</label>
+                      <input type="text" class="form-control" id="isbn" placeholder="ISBN do livro" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="data-publicacao">Data de Publicação</label>
+                      <input type="date" class="form-control" id="data-publicacao" placeholder="dd/mm/aaaa" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="categoria">Categoria do Livro</label>
+                      <select name="categoria" id="categoria" class="form-control" required>
+                        <option value="">Selecione a categoria</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="autor">Autor do Livro</label>
+                      <select name="autor" id="autor" class="form-control" required>
+                        <option value="">Selecione o autor</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- /.card-body -->
+
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                  </div>
+                </form>
               </div>
               <!-- /.card -->
             </div>
+            <!--/.col (left) -->
           </div>
           <!-- /.row -->
         </div><!-- /.container-fluid -->
       </section>
       <!-- /.content -->
     </div>
+    <!-- /.content-wrapper -->
+
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
       <!-- Control sidebar content goes here -->
@@ -151,7 +190,7 @@
   <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
   <script src="dist/js/adminlte.js"></script>
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/main-livro.js"></script>
 </body>
 
 </html>
